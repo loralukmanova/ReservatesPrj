@@ -1,0 +1,5 @@
+boatin 350 340 number-one.png boatin.jpg opisanie
+boatin 840 500 number-one.png boatin.jpg opisanie
+boatin 560 585 number-one.png boatin.jpg opisanie
+boatin 260 610 number-one.png boatin.jpg opisanie
+boatin 665 120 number-one.png boatin.jpg opisanie

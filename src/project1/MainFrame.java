@@ -20,6 +20,7 @@ import java.nio.file.StandardOpenOption;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class MainFrame extends javax.swing.JFrame {
@@ -341,10 +342,25 @@ public class MainFrame extends javax.swing.JFrame {
         img.setIcon(new ImageIcon(absolutePath+"/"+r.getImageName()));
         JLabel descr = new JLabel(r.getDescription());
         descr.setBounds(170,10, 100,100);
+        JButton btnClose = new JButton("X");
+        btnClose.setBounds(265, 0, 35, 35);
+        btnClose.addMouseListener(new java.awt.event.MouseAdapter() {
+                public void mouseClicked(java.awt.event.MouseEvent evt) {
+                    reservatePreview.setVisible(false);
+                    mp.remove(reservatePreview);
+                    mp.repaint();
+                }
+            });
         reservatePreview.add(img);
         reservatePreview.add(descr);
+        reservatePreview.add(btnClose);
         reservatePreview.setVisible(true);
+        
+        mp.add(reservatePreview);
+        
+        mp.repaint();
     }    
+    
     
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
         // TODO add your handling code here:
